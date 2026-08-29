@@ -73,8 +73,7 @@ nav a:hover {
 
 /* Главный баннер с фотографией */
 .hero {
-    background: linear-gradient(rgba(20, 30, 40, 0.65), rgba(20, 30, 40, 0.65)), 
-                url('https://www.ivd.ru/images/cache/2023/5/31/fit_960_530_false_crop_1280_720_0_173_q90_2949522_36350f5ec390f51a852edf141.jpeg') no-repeat center center/cover;
+    background: linear-gradient(rgba(20, 30, 40, 0.65), rgba(20, 30, 40, 0.65)), url('https://www.ivd.ru/images/cache/2023/5/31/fit_960_530_false_crop_1280_720_0_173_q90_2949522_36350f5ec390f51a852edf141.jpeg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
