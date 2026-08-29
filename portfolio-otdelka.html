@@ -40,5 +40,24 @@
             <p>&copy; 2026 Гриша и Даниил. Все права защищены.</p>
         </div>
     </footer>
+        <!-- Модальное окно для полноэкранного просмотра -->
+    <div id="myModal" class="modal" onclick="document.getElementById('myModal').style.display='none'">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
 </body>
+        <script>
+        // Получаем модальное окно и элемент изображения внутри него
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+
+        // Находим все картинки в галерее и вешаем на них клик
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.style.cursor = 'pointer'; // Делаем курсор в виде руки
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
+    </script>
 </html>
