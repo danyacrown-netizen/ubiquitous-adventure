@@ -33,42 +33,58 @@ h2 {
 }
 
 /* Шапка */
+/* Шапка с эффектом Glassmorphism (матовое стекло) */
 header {
-    background: #2c3e50;
+    background: transparent; /* Полностью прозрачный фон шапки */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .header-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 25px 0; /* Немного увеличили отступы для солидности */
 }
 
 .logo {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Увеличили логотип */
     font-weight: bold;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Тень, чтобы текст читался на любом фоне */
 }
 
 .logo span {
     color: #f39c12;
 }
 
+/* Стеклянные овальные кнопки для меню */
 nav a {
     color: #fff;
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-    transition: 0.3s;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 1.1rem; /* Увеличили размер слов в меню */
+    padding: 10px 22px; /* Внутренние отступы, чтобы получился овал */
+    border-radius: 50px; /* Идеально сглаженные круглые углы (овал) */
+    background: rgba(255, 255, 255, 0.15); /* Прозрачный белый фон («стекло») */
+    backdrop-filter: blur(10px); /* Эффект размытия за овалом */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Тонкая стеклянная граница */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
+/* Эффект при наведении на овалы */
 nav a:hover {
-    color: #f39c12;
+    background: rgba(243, 156, 18, 0.8); /* Овал плавно окрашивается в ваш фирменный оранжевый */
+    border-color: #f39c12;
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(243, 156, 18, 0.4);
+    transform: translateY(-2px); /* Овал слегка приподнимается */
 }
 
 /* Главный баннер с фотографией */
